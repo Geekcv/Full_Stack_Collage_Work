@@ -1,0 +1,47 @@
+use myDatabase; // Switch to your database
+db.users.insertOne({ name: 'John Doe', email: 'john.doe@example.com' });
+
+
+
+
+db.users.insertMany([
+  { name: 'Jane Smith', email: 'jane.smith@example.com' },
+  { name: 'Bob Johnson', email: 'bob.johnson@example.com' }
+]);
+
+
+
+db.users.find();
+
+
+db.users.find().pretty();
+
+
+db.users.updateOne(
+  { name: 'John Doe' }, // Filter
+  { $set: { email: 'updated.email@example.com' } } // Update
+);
+
+
+
+db.users.updateMany(
+  { status: 'active' }, // Filter
+  { $set: { status: 'inactive' } } // Update
+);
+
+
+
+db.users.replaceOne(
+  { name: 'John Doe' }, // Filter
+  { name: 'Updated Name', email: 'new.email@example.com' } // Replacement document
+);
+
+
+
+db.users.deleteOne({ name: 'John Doe' }); // Filter
+
+
+
+db.users.deleteMany({ status: 'inactive' }); // Filter
+
+
