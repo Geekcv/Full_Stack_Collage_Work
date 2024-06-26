@@ -1,0 +1,16 @@
+<h2>angular-array-object works!</h2>
+<!-- Bind Array -->
+<h2>Names</h2>
+<ul>
+    <!-- <li *ngFor="let name of names">{{ name }}</li> -->
+ <li *ngFor="let name of names; let i = index">Index: {{ i }} - Name: {{ name }}</li>
+    
+</ul>
+
+<!-- Bind Object -->
+<h2>Person Details</h2>
+<p>Name: {{ person.name }}</p>
+<p>Age: {{ person.age }}</p>
+<p>Address: {{ person.address.street }}, {{ person.address.city }}, {{ person.address.state }}</p>
+
+   
